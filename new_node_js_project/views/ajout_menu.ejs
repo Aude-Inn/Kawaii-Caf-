@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <%- include('partials/head') %>
+  <body>
+    <header>
+      <h1><%= title %></h1>
+      <%- include('partials/nav') %>
+    </header>
+    <main>
+        <main>
+            <h1><%= title %></h1>
+
+            <form action="/ajout_menu" method="POST">
+
+              <label for="model">Type de café :</label>
+              <input type="text" name="model" id="model" required>
+            
+              <!-- <label for="id">ID :</label>
+              <input type="text" name="id" id="id" required> -->
+            
+              <label for="img">Image URL :</label>
+              <input type="url" name="img" id="img" required>
+
+              <label for="describe">Description :</label>
+              <input type="text" name="describe" id="describe" required>
+            
+              <button type="submit">Ajouter la boisson</button>
+            </form>
+          
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

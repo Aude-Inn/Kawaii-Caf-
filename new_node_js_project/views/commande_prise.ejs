@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <%- include('partials/head') %>
+  <body>
+    <header>
+      <h1><%= title %></h1>
+      <%- include('partials/nav') %>
+    </header>
+    <main>
+      <img
+        src="https://i.pinimg.com/736x/64/d8/94/64d894b6bc52e0a7b03d9a2e6fd42eef.jpg"
+        alt="Café mignon"
+        style="width: 500px; height: auto"
+      />
+      <p>
+        💗Reviens, nous voir quand tu veux à <strong>KAWAIIII Café !</strong> 💗
+      </p>
+      <h2>🌸Vous avez commandé <%= quantity %> <%= coffeeType %>(s).🌸</h2>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <%- include('partials/head') %>
+  <body>
+    <header>
+      <h1><%= title %></h1>
+      <%- include('partials/nav') %>
+    </header>
+    <main>
+      <form action="/commande" method="post">
+        <label for="coffeeType">Choisissez votre café trop KAWAIII :</label>
+        <select name="coffeeType" id="coffeeType">
+          <% coffee.forEach(function(coffeeOption) { %>
+          <option value="<%= coffeeOption %>"><%= coffeeOption %></option>
+          <% }); %>
+        </select>
+
+        <label for="quantity">Quantité:</label>
+        <input
+          type="number"
+          name="quantity"
+          id="quantity"
+          min="1"
+          required
+          max="10"
+        />
+        <button type="submit">Commander</button>
+      </form>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

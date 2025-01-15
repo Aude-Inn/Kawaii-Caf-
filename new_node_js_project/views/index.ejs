@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <%- include('partials/head') %>
+  <body>
+    <header>
+      <h1><%= title %></h1>
+      <%- include('partials/nav') %>
+    </header>
+    <main>
+      <h2><%= message %></h2>
+      <p><%= description %></p>
+      <img
+        src="https://img.freepik.com/photos-gratuite/illustration-cafe-anime_23-2151764670.jpg"
+        alt="Café mignon"
+        style="width: 300px; height: auto"
+      />
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>
