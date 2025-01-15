@@ -143,13 +143,17 @@ newApp.get("/menu", (req, res) => {
 
 newApp.get("/commande", (req, res) => {
   const title = "Ma commande de café";
-  let coffeeModel = coffees.map((coffee) => coffee.model);
-  res.render("commande", {
-    title: title,
-    coffee: coffeeModel,
+  connection.query("SELECT * FROM coffees", (err, rows, fields) => {
+    if (err) throw err;
+    coffees = rows;
+
+    let coffeeModel = coffees.map((coffee) => coffee.model);
+    res.render("commande", {
+      title: title,
+      coffee: coffeeModel,
+    });
   });
 });
-
 // Résultat de ta petite commande troOp Kawaiii
 // __________________________________________________________________________________________________________________________
 
